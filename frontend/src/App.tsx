@@ -28,7 +28,7 @@ const App = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post<SearchResponse>('http://localhost:3000/search', { searchQuery });
+      const response = await axios.post<SearchResponse>('https://insta-task.onrender.com/search', { searchQuery });
 
       // Extract the Excel base64 and JSON data from the response
       const { excelBuffer, data } = response.data;
